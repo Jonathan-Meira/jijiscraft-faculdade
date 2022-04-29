@@ -16,7 +16,7 @@ if( !function_exists( 'calculaFrete' ))
       $peso,        /* valor dado em Kg incluindo a embalagem. 0.1, 0.3, 1, 2 ,3 , 4 */
       $altura,      /* altura do produto em cm incluindo a embalagem */
       $largura,     /* altura do produto em cm incluindo a embalagem */
-      $comprimento, /* comprimento do produto incluindo embalagem em cm */
+      $comprimento, /* comprimento do produto incluindo embalagem em cm <div class=""></div>*/
       $valor_declarado='0' /* indicar 0 caso nao queira o valor declarado */
    ){
 
