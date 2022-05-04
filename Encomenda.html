@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
+    <script src="logica.js"></script>
 
     <title>Jiji's Craft</title>
   
@@ -64,9 +65,34 @@
     </div>
     <div class="row">
       <div class="col">
-        <input type="text" maxlength="8" class="form-control" onkeypress="return  (event.charCode >= 48 && event.charCode <= 57)"   id="Cep" placeholder="Digite seu Cep">
-      </div>
+
+        <form method="get" action=".">
+          <label>
+          <input name="cep" type="text" id="cep" value=""  maxlength="9" onkeypress="return ( event.charCode >= 48 && event.charCode <= 57 )" class="form-control" placeholder="Digite seu Cep"
+                 onblur="pesquisacep(this.value);" /></label><br />
+          </div>
+          <div class="col">
+          <label> <input name="rua" class="form-control" type="text" id="rua" size="60" /></label><br />
+          </div>
+          <div class="col">
+          <label><input name="bairro" class="form-control" type="text" id="bairro" size="40" /></label><br />
+          </div>
+          <div class="col">
+          <label><input name="cidade" class="form-control" type="text" id="cidade" size="40" /></label><br />
+         </div>
+         <div class="col">
+          
+        <label><input name="uf" class="form-control"   type="text" id="uf" size="2" /></label><br />
+        </div>
+        <label hidden>IBGE:
+          <input name="ibge" class="form-control"  style = ""type="text" id="ibge" size="8" /></label><br />
+        </form>
       
+
+        
+      
+      </div>
+      <div class=" row">
       <div class="col">
         <input type="text" maxlength="6" class="form-control" id="numero"  onkeypress="return ( event.charCode >= 48 && event.charCode <= 57 )" placeholder="Digite o número da sua residência">
 
@@ -112,8 +138,15 @@
         </div>
       </div>
 
+<!-- INICIO CODIGO PAGSEGURO -->
+<a href="https://pagseguro.uol.com.br/desenvolvedor/simulador_de_frete.jhtml?CepOrigem=88122030&amp;Peso=1&amp;Valor=0,00" id="ps_freight_simulator" target="_blank"><img src="https://p.simg.uol.com.br/out/pagseguro/i/user/imgCalculoFrete.gif" id="imgCalculoFrete" alt="Cálculo automático de frete" border="0" /></a>
+<script type="text/javascript" src="https://p.simg.uol.com.br/out/pagseguro/j/simulador_de_frete.js"></script>
+<!-- FINAL CODIGO PAGSEGURO -->
+
+
       </form>
     </div>
+
   
 
     <footer class="mdb-footer">
