@@ -52,7 +52,8 @@
      <div class="row">
                    
             <div class="col">
-            <input type="text" class="form-control "  onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode = 32) ||(event.charCode >= 97 && event.charCode <= 122) " id="Nome" placeholder="Digite seu nome completo">
+            <input type="text" class="form-control "onkeypress="return event.charCode >= 97 && event.charCode <= 122 || event.charCode >= 65 && event.charCode <= 90 || event.charCode == 32"
+            id="Nome" placeholder="Digite seu nome completo">
             </div>
 
              <div class="col">
@@ -72,17 +73,17 @@
                  onblur="pesquisacep(this.value);" /></label><br />
           </div>
           <div class="col">
-          <label> <input name="rua" class="form-control" type="text" id="rua" size="60" /></label><br />
+          <label> <input name="rua" class="form-control" placeholder="Rua" type="text" id="rua" size="60" /></label><br />
           </div>
           <div class="col">
-          <label><input name="bairro" class="form-control" type="text" id="bairro" size="40" /></label><br />
+          <label><input name="bairro" class="form-control" placeholder="Bairro" type="text" id="bairro" size="40" /></label><br />
           </div>
           <div class="col">
-          <label><input name="cidade" class="form-control" type="text" id="cidade" size="40" /></label><br />
+          <label><input name="cidade" class="form-control" placeholder="Cidade" type="text" id="cidade" size="40" /></label><br />
          </div>
          <div class="col">
           
-        <label><input name="uf" class="form-control"   type="text" id="uf" size="2" /></label><br />
+        <label><input name="uf" class="form-control"  placeholder="Estado" type="text" id="uf" size="2" /></label><br />
         </div>
         <label hidden>IBGE:
           <input name="ibge" class="form-control"  style = ""type="text" id="ibge" size="8" /></label><br />
@@ -98,7 +99,7 @@
 
       </div>
       <div class="col">
-        <input type="text" class="form-control" id="complemento" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode = 32) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57)"  placeholder="complemento da sua residência">
+        <input type="text" class="form-control" id="complemento" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode = 32) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57)"  placeholder="Digite o complemento da sua residência">
 
       </div>
       </div>
@@ -138,12 +139,7 @@
         </div>
       </div>
 
-<!-- INICIO CODIGO PAGSEGURO -->
-<a href="https://pagseguro.uol.com.br/desenvolvedor/simulador_de_frete.jhtml?CepOrigem=88122030&amp;Peso=1&amp;Valor=0,00" id="ps_freight_simulator" target="_blank"><img src="https://p.simg.uol.com.br/out/pagseguro/i/user/imgCalculoFrete.gif" id="imgCalculoFrete" alt="Cálculo automático de frete" border="0" /></a>
-<script type="text/javascript" src="https://p.simg.uol.com.br/out/pagseguro/j/simulador_de_frete.js"></script>
-<!-- FINAL CODIGO PAGSEGURO -->
-
-
+      <div class="Correios.php"></div>
       </form>
     </div>
 
