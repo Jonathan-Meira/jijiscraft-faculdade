@@ -70,3 +70,8 @@ else {
   limpa_formulário_cep();
 }
 };
+
+
+if (!preg_match('/^[\p{L} ]+$/u', $name)){
+  $errors[] = 'Name must contain letters and spaces only!';
+}
